@@ -1,0 +1,32 @@
+.social-icons {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.policy {
+    display: grid;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 70px;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+.bannerr{
+    margin-top: 20px;
+    height:400px;
+   
+
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
