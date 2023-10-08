@@ -11,6 +11,10 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Services from './components/Services/Services';
 
+import Login from './components/Login/Login';
+import Registration from './components/registration/Registration';
+
+
 
 const router = createBrowserRouter([
   {
@@ -29,12 +33,22 @@ const router = createBrowserRouter([
       },
       {
           path:"/Service",
-          element:<Services></Services>
+          element:<Services></Services>,
+          loader:()=>fetch('Card.json')
+          
       },
       {
           path:"/Contact",
           element:<Contact></Contact>
           
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/registration",
+        element:<Registration></Registration>
       }
   ]
   },

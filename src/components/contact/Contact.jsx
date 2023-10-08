@@ -5,9 +5,9 @@ import { AiOutlineYoutube } from 'react-icons/ai';
 
 const Contact = () => {
     return (
-        <div className="pt-9">
+        <div className="py-16">
             <div className="text-center text-3xl font-extrabold">Contact Us Today!</div>
-           <div className="grid grid-cols-2 pl-[25%] gap-8 ">
+           <div className="grid grid-cols-1 md:grid-cols-2 pl-[25%] gap-8 ">
            <div className="pt-4">
                 <p className='text-xl font-bold'>Our Office</p>
                 <p>123 Fifth Avenue, Uttora, AB 1160, Dhaka</p>

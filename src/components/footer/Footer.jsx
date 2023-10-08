@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='bannerr'>
              <div>
              
-                <div className="social-icons text-3xl">
+                <div className="social-icons text-3xl text-white">
                 
                    <a href=""> <FaFacebookF></FaFacebookF></a>
                     <a href=""><AiFillTwitterCircle></AiFillTwitterCircle></a>
@@ -15,7 +15,7 @@ const Footer = () => {
 
 
                 </div>
-                <div className="policy">
+                <div className="policy text-white">
                     <p>Terms and Conditions</p>
                     <p>Privacy Policy</p>
                     <p>Cookie Policy</p>

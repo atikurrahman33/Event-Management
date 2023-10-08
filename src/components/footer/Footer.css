@@ -1,5 +1,5 @@
 .social-icons {
-    margin-top: 150px;
+    
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -15,9 +15,10 @@
     
 }
 .bannerr{
-    margin-top: 20px;
-    height:400px;
-   
+    padding: 40px 0;
+    background-color: black;
+    
+  
 
 }
 
