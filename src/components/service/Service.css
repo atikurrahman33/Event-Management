@@ -1,0 +1,38 @@
+.card{
+    width: 300px;
+    height:420px ;
+    border: 2px solid gray;
+    
+}
+.photo{
+    width: 300px;
+    height: 220px;
+   
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-btn{
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+.home-container{
+    display: flex;
+    gap: 45px;
+
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    gap: 15px;
+    /* width: 600px; */
+   
+
+}
+.card-img{
+   border-radius: 10px;
+
+}
