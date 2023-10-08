@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/ZzP8Vt8/9-1.jpg",
+      "name": "Elegant Dream Wedding",
+      "description": "Celebrate your love with an enchanting wedding ceremony. Our expert team will turn your dreams into a reality, creating memories that will last a lifetime.",
+      "price": 15000
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/XW2KYQ2/9-2.jpg",
+      "name": "Joyful Birthday Bash",
+      "description": "Make your birthday unforgettable with a lively celebration. From decorations to entertainment, we've got everything covered for a day full of joy and surprises.",
+      "price": 3000
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/YTyQhWb/9-3.jpg",
+      "name": "Romantic Anniversary Soiree",
+      "description": "Celebrate the milestones of your love story with a romantic anniversary party. Our team will create an atmosphere filled with love and nostalgia.",
+      "price": 8000
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/K2TYHwk/9-4.jpg",
+      "name": "Chic Engagement Affair",
+      "description": "Announce your engagement in style with a chic and sophisticated party. We'll handle the details so you can focus on the excitement of your future together.",
+      "price": 5000
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/W69DpKY/9-5.jpg",
+      "name": "Farewell to a Legend",
+      "description": "Celebrate a well-deserved retirement with a memorable party. Honor the retiree's achievements and toast to a future filled with relaxation and new adventures.",
+      "price": 6000
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/tQwGN3t/9-6.jpg",
+      "name": "Adorable Baby Shower Bliss",
+      "description": "Welcome the newest addition to your family with a heartwarming baby shower. Our team will create a sweet and charming atmosphere for this special occasion.",
+      "price": 4000
+    }
+  ]

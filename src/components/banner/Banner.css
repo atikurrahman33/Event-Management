@@ -1,0 +1,10 @@
+.banner{
+    height:500px;
+    background: url("https://i.ibb.co/h956z8J/image-1000x500.png");
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    linear-gradient:(rgba(0,0,0,0),rgba(0,0,0,6));
+   
+}
