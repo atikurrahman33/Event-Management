@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import SocialLogin from "../SocialLogin/SocialLogin";
+import Swal from "sweetalert2";
+
 
 const Login = () => {
 
-  const {signin}=useContext(AuthContext);
-  const locatio=useLocation();
-  const navigate=useNavigate()
+  const {signIn}=useContext(AuthContext);
+  const location=useLocation();
+  const navigate = useNavigate()
 
 
   const handleLogin = e => {
@@ -15,16 +18,29 @@ const Login = () => {
     const email=(form.get("email")); 
     const password=(form.get("password"));
     console.log(email,password) ;
-    signin(email,password)
+    signIn(email,password)
     .then((result) => {
-       
-      console.log = result.user;
-
-      navigate(locatio?.state? locatio.state :"/")
+      const loggedUser = result.user;
+      console.log(loggedUser);
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Successfully login',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      navigate(location?.state? location.state :"/")
       // ...
     })
     .catch((error) => {
-      console.error(error)
+      console.error(error);
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: `${error.message}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
     });
   }
 
@@ -55,6 +71,7 @@ const Login = () => {
               </div>
               <p >Don't have a account? <Link className="text-pink-700 font-bold" to={`/registration`}>Register</Link></p>
             </form>
+            <SocialLogin/>
           </div>
         </div>
       </div>

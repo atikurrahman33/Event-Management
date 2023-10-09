@@ -1,9 +1,13 @@
-import React, { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import Swal from 'sweetalert2';
+
 
 const Registration = () => {
-
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const {createUser}= useContext(AuthContext)
     const handleRegister = e => {
         e.preventDefault();
@@ -11,15 +15,44 @@ const Registration = () => {
         const email=(form.get("email")); 
         const password=(form.get("password")); 
         console.log(email,password)
-
+        if (!/(?=.*[A-Z])/.test(password)) {
+            setError('Please enter at least one uppercase');
+            setSuccess('')
+            return;
+        } else if (!/(?=.*[!@#$&*])/.test(password)) {
+            setError('Please enter at least one special character');
+            setSuccess('')
+            return;
+        } else if (!/(?=.*[0-9])/.test(password)) {
+            setError('Please enter at least one number');
+            setSuccess('')
+            return;
+        } else if (!/.{6}/.test(password)) {
+            setError('Please enter minimum 6 character');
+            setSuccess('')
+            return;
+        }
         createUser(email,password)
-        .then((userCredential) => {
+        .then(result => {
             // Signed up 
-            console.log = userCredential.user;
+
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            setError('')
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Successfully register !',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            // form.reset()
             // ...
           })
           .catch((error) => {
-            console.error(error)
+            console.error(error);
+            setError(error.message)
+            setSuccess('')
           });
       }
     return (
@@ -54,7 +87,12 @@ const Registration = () => {
                                 </p>
                                </Link>
                             </form>
+                            <SocialLogin/>
                         </div>
+                        <label className="label">
+                            <p className="label-text-alt text-red-600">{error}</p>
+                            <p className="label-text-alt text-green-600">{success}</p>
+                        </label>
                     </div>
                 </div>
             </section>

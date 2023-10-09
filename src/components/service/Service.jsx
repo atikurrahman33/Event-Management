@@ -2,7 +2,8 @@
 import './Service.css';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 const Service = ({ items }) => {
@@ -10,10 +11,7 @@ const Service = ({ items }) => {
     
     const { id,  name, price, image, description } = items;
 
-    const navigate=useNavigate();
-    const handleClic= ()=>{
-        navigate(`/abouts/${id}`)
-    }
+  
 
     const first10Words = description.split(' ').slice(0, 10).join(' ');
 
@@ -33,7 +31,7 @@ const Service = ({ items }) => {
              
                 
                   <div className='butt'>
-                   <button onClick={handleClic} className='card-btn text-black'>See Details</button> 
+                   <Link to={`/abouts/${id}`}><button  className='card-btn text-black'>See Details</button> </Link>
                 </div>
                
                 

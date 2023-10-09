@@ -1,11 +1,29 @@
 
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import DetailsCard from './detailsCard';
 
-const Details = () => {
+
+const ManyItem = () => {
+
+    const[card, setcart]=useState({});
+
+    const {id}=useParams();
+    
+
+    const cards= useLoaderData();
+    
+    useEffect(()=>{
+        const findCard = cards.find((card)=>card.id==id)
+        setcart(findCard)
+
+    },[id, cards])
     return (
-        <div>
-            
-        </div>
+       <div>
+        <DetailsCard card={card}></DetailsCard>
+       </div>
     );
 };
 
-export default Details;
+export default ManyItem;
