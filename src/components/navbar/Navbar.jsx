@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="flex justify-between py-6 items-center ">
             <div className="flex gap-5 ">
-                <div ><img className="rounded-full h-12" src="https://i.ibb.co/FxTXbJT/istockphoto-1495088043-612x612.jpg" alt="" /></div>
+                <div ><img className="rounded-full h-12" src="https://i.ibb.co/hZYV8kT/event107.jpg" alt="" /></div>
                 <div className="text-rose-800 font-extrabold text-2xl">Event Management</div>
             </div>
             <div >
@@ -59,6 +59,17 @@ const Navbar = () => {
                             }
                         >
                             Contact
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink
+                            to="/award"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-pink-700 font-bold underline" : ""
+                            }
+                        >
+                            Award
                         </NavLink>
                     </li>
                 </ul>

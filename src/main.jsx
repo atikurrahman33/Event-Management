@@ -16,6 +16,8 @@ import Registration from './components/registration/Registration';
 import AuthProvider from './components/provider/AuthProvider';
 import Details from './components/details/Details';
 import PrivateRoute from './components/route/PrivateRoute';
+import ErrorCard from './components/home/ErrorCard';
+import Awards from './components/Awards/Awards';
 
 
 
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<MainLayout></MainLayout> ,
+    errorElement :<ErrorCard></ErrorCard>,
     children:[
       {
           path:"/",
@@ -62,6 +65,10 @@ const router = createBrowserRouter([
 
 
        
+      },
+      {
+        path:"/award",
+        element:<PrivateRoute><Awards></Awards></PrivateRoute>
       },
      
   ]
