@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+    const{user ,Logout}=useContext(AuthContext);
+    const handleSignout= () =>{
+        Logout()
+        .then()
+        .catch()
+
+    }
     return (
         <div className="flex justify-between py-6 items-center ">
             <div className="flex gap-5 ">
@@ -64,7 +73,11 @@ const Navbar = () => {
                     </label>
                 </div>
 
-                <NavLink
+                {
+                    user?
+                    <button onClick={handleSignout} className="font-bold">Signout</button>
+                    :
+                    <NavLink
                     to="/login"
                     className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "text-pink-700 font-bold underline" : ""
@@ -74,6 +87,7 @@ const Navbar = () => {
                 </NavLink>
 
 
+                }
             </div>
 
         </div>

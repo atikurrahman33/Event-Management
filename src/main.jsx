@@ -13,6 +13,10 @@ import Services from './components/Services/Services';
 
 import Login from './components/Login/Login';
 import Registration from './components/registration/Registration';
+import AuthProvider from './components/provider/AuthProvider';
+import Details from './components/details/Details';
+import PrivateRoute from './components/route/PrivateRoute';
+
 
 
 
@@ -24,7 +28,7 @@ const router = createBrowserRouter([
       {
           path:"/",
           element:<Home></Home>,
-          loader:()=>fetch('Card.json')
+          loader:()=>fetch('/Card.json')
           
       },
       {
@@ -33,8 +37,9 @@ const router = createBrowserRouter([
       },
       {
           path:"/Service",
+          loader:()=>fetch('/Card.json'),
           element:<Services></Services>,
-          loader:()=>fetch('Card.json')
+          
           
       },
       {
@@ -49,13 +54,24 @@ const router = createBrowserRouter([
       {
         path:"/registration",
         element:<Registration></Registration>
-      }
+      },
+      {
+        path:"/abouts/:id",
+        loader:({params})=> fetch(`Card.json/${params.id}`),
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+
+
+       
+      },
+     
   ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

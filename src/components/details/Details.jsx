@@ -1,6 +1,6 @@
 
 
-const DetailsCard = () => {
+const Details = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const DetailsCard = () => {
     );
 };
 
-export default DetailsCard;
+export default Details;
