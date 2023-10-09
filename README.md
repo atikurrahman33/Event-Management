@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
+Event Management Project
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project features
+
+* In this project we work to show our event management details.
+
+* We work to creat login and register form ,when we click button we must need to register.
+
+* When we register or login we show a toast this is very good feature in our project.
+
+* Create private route to see more details our event.
+
+* This project is very good to know all event information on real time.
